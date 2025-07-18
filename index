@@ -46,7 +46,7 @@ video {
   <div class="swiper-wrapper">
     <div class="swiper-slide">
       <div class="video-container">
-        <video src="https://drive.google.com/file/d/19WJ-DIwctkhOSjBzMQB3MYnr8OXFGm7f/view?usp=drive_link" autoplay muted playsinline controls></video>
+        <video src="https://drive.google.com/uc?export=preview&id=19WJ-DIwctkhOSjBzMQB3MYnr8OXFGm7f" autoplay muted playsinline controls></video>
       </div>
     </div>
     <div class="swiper-slide">
