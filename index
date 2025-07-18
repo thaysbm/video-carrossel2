@@ -1,0 +1,102 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Carrossel de Vídeos Verticais</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<style>
+html, body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  background: transparent;
+}
+.swiper {
+  width: 100vw;
+  max-height: 445px;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: auto;
+}
+.video-container {
+  position: relative;
+  width: 250px; /* ajuste conforme largura dos vídeos verticais */
+  height: 445px;
+  margin-right: 8px;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: #F2F2F2;
+}
+</style>
+</head>
+<body>
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="video-container">
+        <video src="https://drive.google.com/file/d/19WJ-DIwctkhOSjBzMQB3MYnr8OXFGm7f/view?usp=drive_link" autoplay muted playsinline controls></video>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="video-container">
+        <video src="https://youtube.com/shorts/5WjMrftgNuY" autoplay muted playsinline controls></video>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="video-container">
+        <video src="https://youtube.com/shorts/iVKf4s0Of9k" autoplay muted playsinline controls></video>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="video-container">
+        <video src="https://youtube.com/shorts/H7Oup8DoI8w" autoplay muted playsinline controls></video>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="video-container">
+        <video src="https://youtube.com/shorts/e31nYhwqZDo" autoplay muted playsinline controls></video>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="video-container">
+        <video src="https://youtube.com/shorts/a95pcP9T3aM" autoplay muted playsinline controls></video>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+document.querySelectorAll('video').forEach(video => {
+  video.addEventListener('click', function() {
+    if (video.muted) {
+      video.muted = false;
+      video.play();
+    }
+  });
+});
+</script>
+</body>
+</html>
